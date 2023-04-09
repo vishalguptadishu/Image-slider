@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Image Slider</h1>
+    <div id="container" >
+        
+        <i onclick="btn_prev()"  class="fa-solid fa-chevron-left"></i>
+        <img id="img1" src="" alt="">
+        <i onclick="btn_next()" class="fa-solid fa-chevron-right"></i>
+        
+       
+
+
+    </div>
+</body>
+</html>
+<script>
+    let arrayofimg=["https://t4.ftcdn.net/jpg/05/50/61/75/360_F_550617518_Eu3U6kTl3mODPvnfTMFHQ88z1y5KNfNQ.jpg",
+    "https://st.depositphotos.com/1771536/1285/i/600/depositphotos_12851576-stock-photo-seljalandfoss-waterfall-at-sunset-in.jpg",
+    "https://www.xtrafondos.com/wallpapers/paisaje-de-lago-en-las-montanas-al-amanecer-7254.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTHW2eFHG4Ex51JTVzuEjeyspKtJDf-qnBYw&usqp=CAU",
+    "https://e0.pxfuel.com/wallpapers/224/587/desktop-wallpaper-most-beautiful-scenery-amazing-beautiful-scenery.jpg",
+    "https://media-cdn.tripadvisor.com/media/photo-s/15/ea/a9/df/this-is-the-beautiful.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx2902hbF9HySfZwh5qDd9tgcx9HiLqeNKk7UUORSjIYedG7h7irU3Zvp2P7EZF33C1X8&usqp=CAU",
+    "https://img.freepik.com/premium-photo/beautiful-peyto-lake-banff-national-park-alberta-canada_131985-301.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStC_0viDsf-0XgybsGj3Cdyj06VBw9ah_yFvguPT1pK-UIGHUkuEH-yopkIge_pH1Tm7Q&usqp=CAU"
+
+]
+
+
+        let img1=document.querySelector("#img1");
+        img1.src="https://t3.ftcdn.net/jpg/03/36/97/58/360_F_336975809_VvYkV1QZX2E8igeS3kYpcBGiMcK6zWpL.jpg"
+    let num=0
+    function btn_next(){
+    num++;
+    if(num>=arrayofimg.length){
+        num=0;
+        let img1=document.querySelector("#img1");
+        img1.src=arrayofimg[num]
+    }else{
+        let img1=document.querySelector("#img1");
+        img1.src=arrayofimg[num]
+    }
+    
+    }
+    
+    function btn_prev(){
+        num--;
+    if(num==0){
+        num=arrayofimg.length-1;
+        let img1=document.querySelector("#img1");
+        img1.src=arrayofimg[num]
+    }else{
+        let img1=document.querySelector("#img1");
+        img1.src=arrayofimg[num]
+    }
+    
+    }
+
+</script>
